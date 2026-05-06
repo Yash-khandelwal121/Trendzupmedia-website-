@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-[1000] transition-all duration-300 ${isScrolled ? 'bg-white shadow-[0_2px_10px_rgba(0,0,0,0.1)] py-1' : 'bg-white py-2 shadow-sm'}`}>
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-[1400px] mx-auto px-6 flex justify-between items-center relative">
         <Link to="/" className="flex items-center">
           <img
             src="/logo.png"
@@ -69,76 +69,35 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white border border-gray-100 rounded-[24px] shadow-[0_30px_70px_rgba(0,0,0,0.15)] z-[9999] overflow-hidden"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-5 bg-white border border-gray-100 rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[9999] overflow-visible"
                   style={{ 
-                    width: 'min(90vw, 950px)',
+                    width: 'min(95vw, 1300px)',
                     left: '50%',
                     transform: 'translateX(-50%)',
-                    boxSizing: 'border-box'
+                    boxSizing: 'border-box',
+                    padding: '40px 50px'
                   }}
                 >
-                  <div className="flex min-h-[450px]">
-                    {/* Left Sidebar - Categories */}
-                    <div className="w-[35%] bg-gray-50/50 border-r border-gray-100 p-6 space-y-2">
-                      {servicesData.map((category, idx) => (
-                        <div
-                          key={idx}
-                          onMouseEnter={() => setActiveCategoryIdx(idx)}
-                          className={`group flex items-center justify-between px-5 py-4 rounded-xl cursor-pointer transition-all duration-200 ${
-                            activeCategoryIdx === idx 
-                              ? 'bg-white shadow-md text-[#FF1E1E]' 
-                              : 'text-gray-600 hover:bg-white hover:text-[#FF1E1E] hover:shadow-sm'
-                          }`}
-                        >
-                          <span className="font-bold text-[15px] tracking-tight">{category.title}</span>
-                          <motion.div
-                            animate={{ x: activeCategoryIdx === idx ? 3 : 0, opacity: activeCategoryIdx === idx ? 1 : 0 }}
-                            className="text-[#FF1E1E]"
-                          >
-                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 9L5 5L1 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                          </motion.div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Right Panel - Items */}
-                    <div className="w-[65%] p-10 bg-white">
-                      <div className="mb-8">
-                        <h4 className="text-[12px] uppercase tracking-[0.2em] font-extrabold text-[#FF1E1E] mb-2">Explore Our Services</h4>
-                        <h3 className="text-2xl font-bold text-[#111111]">{servicesData[activeCategoryIdx].title}</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10 lg:gap-8">
+                    {servicesData.map((category, idx) => (
+                      <div key={idx} className="space-y-6">
+                        <h3 className="text-[#FF1E1E] font-extrabold text-[13px] uppercase tracking-[0.15em] border-b border-gray-100 pb-4">
+                          {category.title}
+                        </h3>
+                        <ul className="space-y-3.5">
+                          {category.items.map((item, i) => (
+                            <li key={i}>
+                              <Link
+                                to={`/services/${category.slug}/${item.slug}`}
+                                className="text-gray-600 hover:text-[#FF1E1E] transition-all text-[14px] font-medium block hover:translate-x-1.5"
+                              >
+                                {item.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      
-                      <div className="grid grid-cols-2 gap-x-10 gap-y-5">
-                        {servicesData[activeCategoryIdx].items.map((item, i) => (
-                          <Link
-                            key={i}
-                            to={`/services/${servicesData[activeCategoryIdx].slug}/${item.slug}`}
-                            className="group flex flex-col space-y-1 py-1"
-                          >
-                            <span className="text-[15px] font-bold text-gray-800 group-hover:text-[#FF1E1E] transition-colors leading-snug">
-                              {item.name}
-                            </span>
-                            <span className="text-[12px] text-gray-400 group-hover:text-gray-500 transition-colors line-clamp-1 font-medium">
-                              {item.desc || 'Premium solutions for your business.'}
-                            </span>
-                          </Link>
-                        ))}
-                      </div>
-
-                      <div className="mt-12 pt-8 border-t border-gray-100">
-                        <Link 
-                          to={`/services/${servicesData[activeCategoryIdx].slug}`}
-                          className="inline-flex items-center gap-2 text-sm font-bold text-[#111111] hover:text-[#FF1E1E] transition-colors"
-                        >
-                          View All {servicesData[activeCategoryIdx].title}
-                          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.875 7.5H13.125M13.125 7.5L7.5 1.875M13.125 7.5L7.5 13.125" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </motion.div>
               )}
