@@ -53,9 +53,13 @@ const Navbar = () => {
             onMouseLeave={() => setIsMegaMenuOpen(false)}
           >
             <button
-              className={`font-medium flex items-center gap-1 transition-colors duration-200 ${location.pathname.startsWith('/services') ? 'text-[#FF1E1E]' : 'text-[#111111] group-hover:text-[#FF1E1E]'}`}
+              className={`font-medium flex items-center gap-1.5 transition-colors duration-200 ${location.pathname.startsWith('/services') ? 'text-[#FF1E1E]' : 'text-[#111111] group-hover:text-[#FF1E1E]'}`}
             >
-              Services <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+              Services 
+              <ChevronDown 
+                className={`w-4 h-4 transition-transform duration-300 ease-in-out ${isMegaMenuOpen ? 'rotate-180' : 'rotate-0'}`} 
+                strokeWidth={2.5}
+              />
             </button>
 
             <AnimatePresence>
@@ -144,7 +148,11 @@ const Navbar = () => {
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                   className="flex items-center justify-between w-full text-lg font-bold text-[#111111]"
                 >
-                  Services <ChevronDown className={`w-5 h-5 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                  Services 
+                  <ChevronDown 
+                    className={`w-5 h-5 transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : 'rotate-0'}`} 
+                    strokeWidth={2.5}
+                  />
                 </button>
                 <AnimatePresence>
                   {isMobileServicesOpen && (
