@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FF1E1E;
+  --primary-dark: #CC0000;
+  --accent: #F5B400;
+  --accent-dark: #C99000;
+  --brand: #0B1F3A;
+  --black: #000000;
+  --surface: #111111;
+  --surface-2: #1A1A1A;
+  --white: #ffffff;
+  --text-muted: #B0B0B0;
+
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #FF1E1E 0%, #F5B400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* ===== CARD HOVER ===== */
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  border-color: rgba(255, 30, 30, 0.5);
+  box-shadow: 0 0 20px rgba(255, 30, 30, 0.15);
+  transform: translateY(-4px);
+}
+
+/* ===== BUTTON PREMIUM ===== */
+.btn-primary, button.bg-primary, .bg-primary {
+  background-color: #FF1E1E !important;
+  color: #ffffff !important;
+}
+
+.text-primary {
+  color: #FF1E1E !important;
+}
+
+.border-primary {
+  border-color: #FF1E1E !important;
+}
+
+.btn-primary {
+  background: #FF1E1E;
+  color: #fff;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.btn-primary:hover {
+  background: #F5B400 !important;
+  box-shadow: 0 0 20px rgba(245, 180, 0, 0.4) !important;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  border: 2px solid #F5B400;
+  color: #fff;
+  transition: all 0.3s;
+}
+.btn-secondary:hover {
+  background: #F5B400;
+  color: #000;
+}
+
+/* ===== VIDEO MODAL GLOW ===== */
+.video-glow {
+  box-shadow: 0 0 30px rgba(255, 30, 30, 0.2);
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 10px rgba(255, 30, 30, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(255, 30, 30, 0.5); }
+}
+
+/* ===== FOOTER SERVICES ===== */
+.footer-services {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .footer-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer-services a {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.footer-services a:hover {
+  color: #FF1E1E;
+  transform: translateX(5px);
+  transition: 0.3s;
+}
