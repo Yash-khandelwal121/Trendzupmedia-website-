@@ -28,7 +28,6 @@ function App() {
     <Router>
       <Preloader />
       <ScrollToTop />
-      <CustomCursor />
       
       {/* Scroll Progress Bar */}
       <motion.div
@@ -36,7 +35,7 @@ function App() {
         style={{ scaleX }}
       />
       
-      <div className="bg-black min-h-screen text-white selection:bg-primary selection:text-white cursor-none">
+      <div className="bg-black min-h-screen text-white selection:bg-primary selection:text-white">
         <Navbar />
         <main>
           <Routes>

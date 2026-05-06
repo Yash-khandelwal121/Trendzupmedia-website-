@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -56,8 +56,17 @@ const Footer = () => {
               We provide result-oriented digital marketing strategies that help your brand stand out and dominate the digital landscape.
             </p>
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
-                <a key={idx} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-[#FF1E1E] hover:border-[#FF1E1E] transition-all">
+              {[
+                { Icon: Instagram, url: 'https://www.instagram.com/trendzupmediacreations/' },
+                { Icon: Linkedin, url: 'https://www.linkedin.com/company/trendzup-media/about/' }
+              ].map(({ Icon, url }, idx) => (
+                <a 
+                  key={idx} 
+                  href={url} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-[#FF1E1E] hover:border-[#FF1E1E] transition-all"
+                >
                   <Icon size={18} />
                 </a>
               ))}

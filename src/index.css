@@ -130,3 +130,19 @@ body {
   transform: translateX(5px);
   transition: 0.3s;
 }
+
+/* ===== GLOBAL CURSOR IMPROVEMENT ===== */
+a, 
+button, 
+input[type="button"], 
+input[type="submit"], 
+[role="button"],
+.card-hover,
+.cursor-pointer,
+.btn-primary,
+.btn-secondary,
+.social-icon,
+.navbar-item,
+select {
+  cursor: pointer !important;
+}

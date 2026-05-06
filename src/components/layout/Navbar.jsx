@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X, Phone } from 'lucide-react';
 import { servicesData } from '../../data/siteData';
 import { motion, AnimatePresence } from 'framer-motion';
+import SearchBar from '../shared/SearchBar';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,7 +39,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-4 xl:space-x-8">
           <Link
             to="/"
             className={`font-medium transition-colors duration-200 ${location.pathname === '/' ? 'text-[#FF1E1E]' : 'text-[#111111] hover:text-[#FF1E1E]'}`}
@@ -103,9 +104,13 @@ const Navbar = () => {
             className={`font-medium transition-colors duration-200 ${location.pathname === '/about' ? 'text-[#FF1E1E]' : 'text-[#111111] hover:text-[#FF1E1E]'}`}
           >About Us</Link>
 
+          <div className="hidden lg:block lg:w-[200px] xl:w-[280px]">
+            <SearchBar />
+          </div>
+
           <Link
             to="/contact"
-            className="btn-primary px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-[#FF1E1E]/20"
+            className="btn-primary px-6 xl:px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-[#FF1E1E]/20 whitespace-nowrap"
           >
             Get In Touch
           </Link>
@@ -127,6 +132,9 @@ const Navbar = () => {
             className="lg:hidden bg-white shadow-xl border-b border-gray-100 overflow-hidden"
           >
             <div className="container mx-auto px-6 py-8 flex flex-col space-y-6">
+              <div className="mb-2">
+                <SearchBar />
+              </div>
               <Link to="/" className="text-lg font-bold text-[#111111] hover:text-[#FF1E1E]">Home</Link>
               <Link to="/services" className="text-lg font-bold text-[#111111] hover:text-[#FF1E1E]">Services</Link>
               <Link to="/portfolio" className="text-lg font-bold text-[#111111] hover:text-[#FF1E1E]">Portfolio</Link>
