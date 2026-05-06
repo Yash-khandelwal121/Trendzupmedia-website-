@@ -75,13 +75,13 @@ const Hero = ({ onPlayVideo, onConsultation }) => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative hidden lg:block"
         >
-          <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl group border border-white/10">
+          <div className="relative z-10 rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(255,30,30,0.2)] group border border-white/10">
             <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-              alt="Digital Marketing"
-              className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+              src="/hero-hd.png"
+              alt="Trendzup Media Dashboard"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              loading="eager"
             />
-            <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.4)' }}></div>
           </div>
 
           {/* Stats Floating Card */}
