@@ -14,6 +14,8 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import ServicePage from './pages/ServicePage';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -47,6 +49,8 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
