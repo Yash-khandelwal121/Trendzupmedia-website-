@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -47,7 +48,7 @@ const Navbar = () => {
 
           {/* Services with Mega Menu */}
           <div
-            className="relative group"
+            className="group"
             onMouseEnter={() => setIsMegaMenuOpen(true)}
             onMouseLeave={() => setIsMegaMenuOpen(false)}
           >
@@ -60,23 +61,24 @@ const Navbar = () => {
             <AnimatePresence>
               {isMegaMenuOpen && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-6 min-w-[900px] bg-white border border-gray-100 rounded-[10px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] p-8 z-[9999]"
+                  exit={{ opacity: 0, y: 20 }}
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-5 w-[95vw] max-w-[1450px] bg-white border border-gray-100 rounded-[24px] shadow-[0_25px_60px_rgba(0,0,0,0.18)] p-12 z-[9999] overflow-hidden"
+                  style={{ left: '50%', transform: 'translateX(-50%)', boxSizing: 'border-box' }}
                 >
-                  <div className="flex gap-10 justify-between">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10 lg:gap-6 xl:gap-10">
                     {servicesData.map((category, idx) => (
-                      <div key={idx} className="space-y-4">
-                        <h3 className="text-[#FF1E1E] font-bold text-sm uppercase tracking-wider border-b border-gray-100 pb-2">
+                      <div key={idx} className="space-y-6">
+                        <h3 className="text-[#FF1E1E] font-extrabold text-[13px] uppercase tracking-[0.15em] border-b border-gray-100 pb-4">
                           {category.title}
                         </h3>
-                        <ul className="space-y-2">
+                        <ul className="space-y-3.5">
                           {category.items.map((item, i) => (
                             <li key={i}>
                               <Link
                                 to={`/services/${category.slug}/${item.slug}`}
-                                className="text-gray-600 hover:text-[#FF1E1E] transition-colors text-sm block"
+                                className="text-gray-600 hover:text-[#FF1E1E] transition-all text-[14px] font-medium block hover:translate-x-1.5"
                               >
                                 {item.name}
                               </Link>
@@ -136,7 +138,43 @@ const Navbar = () => {
                 <SearchBar />
               </div>
               <Link to="/" className="text-lg font-bold text-[#111111] hover:text-[#FF1E1E]">Home</Link>
-              <Link to="/services" className="text-lg font-bold text-[#111111] hover:text-[#FF1E1E]">Services</Link>
+              
+              <div className="space-y-4">
+                <button 
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className="flex items-center justify-between w-full text-lg font-bold text-[#111111]"
+                >
+                  Services <ChevronDown className={`w-5 h-5 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence>
+                  {isMobileServicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="pl-4 space-y-6 overflow-hidden"
+                    >
+                      {servicesData.map((category, idx) => (
+                        <div key={idx} className="space-y-3">
+                          <h4 className="text-[#FF1E1E] font-bold text-sm uppercase tracking-wider">{category.title}</h4>
+                          <div className="flex flex-col space-y-2">
+                            {category.items.map((item, i) => (
+                              <Link 
+                                key={i} 
+                                to={`/services/${category.slug}/${item.slug}`}
+                                className="text-gray-600 text-base"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               <Link to="/portfolio" className="text-lg font-bold text-[#111111] hover:text-[#FF1E1E]">Portfolio</Link>
               <Link to="/blog" className="text-lg font-bold text-[#111111] hover:text-[#FF1E1E]">Blog</Link>
               <Link to="/about" className="text-lg font-bold text-[#111111] hover:text-[#FF1E1E]">About Us</Link>
