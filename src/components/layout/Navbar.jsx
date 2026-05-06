@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-[1000] transition-all duration-300 ${isScrolled ? 'bg-white shadow-[0_2px_10px_rgba(0,0,0,0.1)] py-1' : 'bg-white py-2 shadow-sm'}`}>
-      <div className="container mx-auto px-6 flex justify-between items-center relative">
+      <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img
             src="/logo.png"
@@ -68,10 +68,22 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-5 w-[95vw] max-w-[1450px] bg-white border border-gray-100 rounded-[24px] shadow-[0_25px_60px_rgba(0,0,0,0.18)] p-12 z-[9999] overflow-hidden"
-                  style={{ left: '50%', transform: 'translateX(-50%)', boxSizing: 'border-box' }}
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white border border-gray-100 rounded-[24px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[9999] overflow-visible"
+                  style={{ 
+                    width: 'min(95vw, 1400px)',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    boxSizing: 'border-box',
+                    padding: '40px 50px'
+                  }}
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10 lg:gap-6 xl:gap-10">
+                  <div 
+                    className="grid gap-10"
+                    style={{ 
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(5, minmax(180px, 1fr))'
+                    }}
+                  >
                     {servicesData.map((category, idx) => (
                       <div key={idx} className="space-y-6">
                         <h3 className="text-[#FF1E1E] font-extrabold text-[13px] uppercase tracking-[0.15em] border-b border-gray-100 pb-4">
