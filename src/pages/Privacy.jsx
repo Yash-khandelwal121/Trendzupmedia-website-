@@ -34,7 +34,7 @@ const Privacy = () => {
               <ul className="list-disc pl-5 space-y-2">
                 <li>To provide and maintain our services.</li>
                 <li>To communicate with you regarding your projects or inquiries.</li>
-                <li>To improve our website and marketing efforts.</li>
+                <li>To improve our website and development efforts.</li>
                 <li>To comply with legal obligations.</li>
               </ul>
             </section>

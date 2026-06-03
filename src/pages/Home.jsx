@@ -10,8 +10,8 @@ import { Quote, Send, CheckCircle2 } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     { name: "John Smith", role: "CEO, TechFlow", content: "Trendzup Media transformed our online presence completely. Our leads increased by 150% within the first 3 months!" },
-    { name: "Sarah Williams", role: "Marketing Director, Bloom", content: "The level of professionalism and creativity they bring to the table is unmatched. Highly recommended for any growing brand." },
-    { name: "Mike Johnson", role: "Founder, GreenSpace", content: "From web design to SEO, they handled everything perfectly. A true partner in our success journey." }
+    { name: "Sarah Williams", role: "Product Manager, TechFlow", content: "The level of professionalism and technical expertise they bring to the table is unmatched. Highly recommended for any growing enterprise." },
+    { name: "Mike Johnson", role: "Founder, GreenSpace", content: "From web apps to cloud systems, they handled everything perfectly. A true partner in our success journey." }
   ];
 
   return (
@@ -90,7 +90,7 @@ const Home = () => {
               <h2 className="text-3xl lg:text-6xl font-bold text-white mb-8">Ready for a Free <span style={{ color: '#FF1E1E' }}>Consultation?</span></h2>
               <p className="text-gray-400 text-lg mb-10">Our experts are ready to audit your current digital presence and provide a custom roadmap for your growth.</p>
               <div className="space-y-4">
-                {['30-Minute Strategy Call', 'Custom Growth Roadmap', 'Competitor Analysis', 'SEO Audit Report'].map((item, i) => (
+                {['30-Minute Technical Call', 'Custom Architecture Plan', 'System Analysis', 'Infrastructure Audit'].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 style={{ color: '#FF1E1E' }} size={24} />
                     <span className="text-white font-medium text-lg">{item}</span>
@@ -161,7 +161,7 @@ const Home = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full -ml-24 -mb-24 blur-3xl" style={{ background: 'rgba(245,180,0,0.2)' }}></div>
             <h2 className="text-3xl lg:text-6xl font-extrabold text-white mb-8 relative z-10">
-              Ready to Scale Your Brand?
+              Ready to Scale Your Software Systems?
             </h2>
             <p className="text-white/90 text-xl mb-10 max-w-2xl mx-auto relative z-10">
               Join 500+ successful companies that have grown their business with our digital solutions.

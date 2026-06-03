@@ -26,8 +26,8 @@ const services = [
     path: "/services/mobile-app/android-app-development"
   },
   {
-    title: "Digital Marketing",
-    desc: "Data-driven marketing strategies that increase visibility and drive conversions.",
+    title: "IT Development",
+    desc: "Scalable software solutions that streamline operations and drive business growth.",
     icon: <BarChart className="w-8 h-8" />,
     iconColor: '#FF1E1E',
     path: "/services/digital-marketing/seo"
@@ -67,7 +67,7 @@ const ServicesHighlight = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto text-lg"
           >
-            We provide comprehensive digital solutions tailored to your business needs, ensuring exponential growth and market dominance.
+            We provide comprehensive IT development solutions tailored to your business needs, ensuring robust performance and scalability.
           </motion.p>
         </div>
 

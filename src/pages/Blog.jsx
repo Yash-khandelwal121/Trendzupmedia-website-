@@ -10,7 +10,7 @@ const Blog = () => {
         <div className="text-center mb-16">
           <span className="font-bold uppercase tracking-widest text-sm mb-4 block" style={{ color: '#FF1E1E' }}>Our Blog</span>
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Insights & Articles</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">Stay updated with the latest trends and best practices in the digital marketing industry.</p>
+          <p className="text-gray-400 max-w-2xl mx-auto">Stay updated with the latest trends and best practices in the IT Development industry.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">
@@ -35,7 +35,7 @@ const Blog = () => {
                     {blog.title}
                   </h2>
                   <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                    {blog.excerpt || "Discover the latest strategies and insights in digital marketing..."}
+                    {blog.excerpt || "Discover the latest strategies and insights in IT Development..."}
                   </p>
                   <Link to={`/blog/${blog.id}`} className="text-white font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
                     Read More <ArrowRight style={{ color: '#FF1E1E' }} />
@@ -65,7 +65,7 @@ const Blog = () => {
             <div className="bg-[#111] border border-[#222] p-6 rounded-2xl">
               <h3 className="text-white font-bold text-lg mb-4">Categories</h3>
               <ul className="space-y-4">
-                {['Digital Marketing', 'Web Design', 'SEO', 'Mobile Apps', 'Case Studies'].map((cat) => (
+                {['IT Development', 'Web Design', 'SEO', 'Mobile Apps', 'Case Studies'].map((cat) => (
                   <li key={cat}>
                     <a 
                       href="#" 

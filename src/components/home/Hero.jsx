@@ -28,7 +28,7 @@ const Hero = ({ onPlayVideo, onConsultation }) => {
             <span className="gradient-text">Trendzup Media</span>
           </h1>
           <p className="text-gray-400 text-lg lg:text-xl mb-10 leading-relaxed max-w-xl">
-            We deliver result-oriented digital marketing strategies that help your brand stand out and dominate the digital landscape.
+            We build scalable IT solutions, modern web applications, and powerful software systems that help businesses grow digitally.
           </p>
 
           <div className="flex flex-wrap gap-5">

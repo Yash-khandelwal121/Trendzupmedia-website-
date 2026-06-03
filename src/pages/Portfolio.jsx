@@ -17,7 +17,7 @@ const Portfolio = () => {
         <div className="text-center mb-16">
           <span className="font-bold uppercase tracking-widest text-sm mb-4 block" style={{ color: '#FF1E1E' }}>Our Work</span>
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Case Studies & Projects</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">Explore our portfolio of successful projects where we've helped brands achieve their digital goals.</p>
+          <p className="text-gray-400 max-w-2xl mx-auto">Explore our portfolio of successful projects where we've helped businesses achieve their software goals.</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">

@@ -1,6 +1,6 @@
-# Trendzup Media - Digital Marketing Agency Website
+# Trendzup Media - IT Development Company Website
 
-A modern, responsive, and high-converting digital marketing agency website built with React, Tailwind CSS, and Framer Motion.
+A modern, responsive, and high-converting IT Development company website built with React, Tailwind CSS, and Framer Motion.
 
 ## Features
 

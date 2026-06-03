@@ -4,7 +4,7 @@ import { CheckCircle2, Award, Zap, Users, Target, Rocket } from 'lucide-react';
 
 const reasons = [
   { title: "Experienced Team", desc: "Our professionals have years of industry experience and deep technical expertise.", icon: <Users className="w-10 h-10" />, color: '#FF1E1E' },
-  { title: "Strategic Planning", desc: "We develop customized strategies based on real-time data and market research.", icon: <Target className="w-10 h-10" />, color: '#F5B400' },
+  { title: "Strategic Planning", desc: "We develop customized architectures based on real-time data and technical requirements.", icon: <Target className="w-10 h-10" />, color: '#F5B400' },
   { title: "Fast Delivery", desc: "We value your time and ensure projects are completed with speed and precision.", icon: <Zap className="w-10 h-10" />, color: '#FF1E1E' },
   { title: "Innovative Ideas", desc: "We bring fresh, creative perspectives to every unique business challenge.", icon: <Rocket className="w-10 h-10" />, color: '#F5B400' },
   { title: "Proven Results", desc: "Our track record is defined by measurable success and high ROI for our clients.", icon: <Award className="w-10 h-10" />, color: '#FF1E1E' },
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
               We don't just build websites; we build scalable digital ecosystems. Our holistic approach to growth ensures that every aspect of your online presence is synchronized for maximum impact.
             </p>
             <div className="space-y-5">
-              {['Result Oriented Approach', 'Experienced Digital Experts', 'Transparent Communication', 'Latest Technology Stack'].map((item, idx) => (
+              {['Result Oriented Approach', 'Experienced IT Experts', 'Transparent Communication', 'Latest Technology Stack'].map((item, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, x: -20 }}

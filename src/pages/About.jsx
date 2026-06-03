@@ -11,7 +11,7 @@ const About = () => {
 
   const team = [
     { name: "Rahul Sharma", role: "CEO & Founder", image: "https://i.pravatar.cc/150?u=rahul" },
-    { name: "Priya Gupta", role: "Digital Marketing Head", image: "https://i.pravatar.cc/150?u=priya" },
+    { name: "Priya Gupta", role: "IT Development Head", image: "https://i.pravatar.cc/150?u=priya" },
     { name: "Amit Verma", role: "Lead Web Developer", image: "https://i.pravatar.cc/150?u=amit" },
     { name: "Sneha Kapur", role: "UI/UX Designer", image: "https://i.pravatar.cc/150?u=sneha" },
   ];
@@ -24,13 +24,13 @@ const About = () => {
           <div className="animate-premium-in">
             <span className="font-bold uppercase tracking-widest text-sm mb-4 block" style={{ color: '#F5B400' }}>About Us</span>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-              Empowering Brands with <span style={{ color: '#FF1E1E' }}>Digital Excellence</span>
+              Empowering Businesses with <span style={{ color: '#FF1E1E' }}>Software Excellence</span>
             </h1>
             <p className="text-[#B0B0B0] text-lg leading-relaxed mb-6">
-              Trendzup Media is a premier digital marketing agency that believes in the power of innovation and strategy. Founded with a vision to revolutionize how brands connect with their audiences, we have grown into a multi-disciplinary team of creative thinkers, technical experts, and strategic planners.
+              Trendzup Media is a premier IT Development company that believes in the power of innovation and strategy. Founded with a vision to revolutionize how businesses build their software, we have grown into a multi-disciplinary team of creative thinkers, technical experts, and strategic planners.
             </p>
             <p className="text-[#B0B0B0] text-lg leading-relaxed">
-              Our journey began with a simple goal: to deliver measurable results that matter. Today, we help businesses of all sizes navigate the complexities of the digital world with confidence and clarity.
+              Our journey began with a simple goal: to deliver measurable results that matter. Today, we help businesses of all sizes navigate the complexities of software development with confidence and clarity.
             </p>
           </div>
           <div className="relative group">
@@ -71,14 +71,14 @@ const About = () => {
           <Target className="w-12 h-12 mb-6" style={{ color: '#F5B400' }} />
           <h2 className="text-3xl font-bold text-white mb-6">Our <span style={{ color: '#FF1E1E' }}>Mission</span></h2>
           <p className="text-[#B0B0B0] leading-relaxed text-lg">
-            To provide innovative and effective integrated brand marketing and public relations solutions which help our clients to grow their businesses and realize their marketing goals.
+            To provide innovative and effective integrated IT solutions and custom software which help our clients to streamline their operations and realize their business goals.
           </p>
         </div>
         <div className="bg-[#111] border border-[#222] p-12 rounded-[2rem] transition-all card-hover">
           <Eye className="w-12 h-12 mb-6" style={{ color: '#F5B400' }} />
           <h2 className="text-3xl font-bold text-white mb-6">Our <span style={{ color: '#FF1E1E' }}>Vision</span></h2>
           <p className="text-[#B0B0B0] leading-relaxed text-lg">
-            To be the most reliable and creative digital marketing agency globally, setting new standards in digital excellence and client satisfaction.
+            To be the most reliable and creative IT Development company globally, setting new standards in software excellence and client satisfaction.
           </p>
         </div>
       </section>
@@ -87,7 +87,7 @@ const About = () => {
       <section className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">Meet Our <span style={{ color: '#FF1E1E' }}>Experts</span></h2>
-          <p className="text-[#B0B0B0] max-w-2xl mx-auto">The brilliant minds behind our successful campaigns and innovative solutions.</p>
+          <p className="text-[#B0B0B0] max-w-2xl mx-auto">The brilliant minds behind our robust software systems and innovative solutions.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, idx) => (

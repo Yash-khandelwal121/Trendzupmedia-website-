@@ -8,7 +8,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <span className="font-bold uppercase tracking-widest text-sm mb-4 block" style={{ color: '#F5B400' }}>Contact Us</span>
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Let's Work Together</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">Have a project in mind? Let's discuss how we can help your brand grow.</p>
+          <p className="text-gray-400 max-w-2xl mx-auto">Have a project in mind? Let's discuss how we can build your software systems.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">

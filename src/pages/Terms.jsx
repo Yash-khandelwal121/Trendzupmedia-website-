@@ -25,7 +25,7 @@ const Terms = () => {
             <section>
               <h2 className="text-xl font-bold text-white mb-4">2. Services Provided</h2>
               <p>
-                Trendzup Media provides digital marketing, web development, app development, and graphic design services. We reserve the right to modify or discontinue any service at any time without prior notice.
+                Trendzup Media provides IT Development, web development, app development, and graphic design services. We reserve the right to modify or discontinue any service at any time without prior notice.
               </p>
             </section>
 

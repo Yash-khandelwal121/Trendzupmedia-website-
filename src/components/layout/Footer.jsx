@@ -26,18 +26,18 @@ const Footer = () => {
       'Hybrid App Development',
       'Native App Development'
     ],
-    'Digital Marketing': [
-      'SEO Services',
-      'Google Ads',
-      'Social Media Marketing',
-      'Lead Generation',
-      'Performance Marketing'
+    'IT Development': [
+      'Software Solutions',
+      'Cloud Systems',
+      'IT Infrastructure',
+      'Business Automation',
+      'Custom Development'
     ],
     'Graphic Designing': [
       'Logo Designing',
       'Business Explainer Video',
       'Social Media Post Design',
-      'Brand Identity Design'
+      'Corporate Identity Design'
     ]
   };
 
@@ -53,7 +53,7 @@ const Footer = () => {
               <img src="/logo.png" alt="Trendzup Media" className="h-10 w-auto object-contain" />
             </Link>
             <p className="text-gray-400 leading-relaxed">
-              We provide result-oriented digital marketing strategies that help your brand stand out and dominate the digital landscape.
+              We build scalable IT solutions, modern web applications, and powerful software systems that help businesses grow digitally.
             </p>
             <div className="flex space-x-4">
               {[
